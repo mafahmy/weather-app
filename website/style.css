@@ -1,3 +1,6 @@
+* {
+  padding: 10px;
+}
 body {
   background: #fffff8;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
@@ -24,6 +27,19 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+}
+.feel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  
+}
+.input-area {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .headline {
@@ -53,6 +69,7 @@ input {
 
 button {
   float: right;
+  border-radius: 25px;
   width: 200px;
   height: 93px;
   background: #3b4a6b;
@@ -87,11 +104,17 @@ textarea:focus,
 button:focus {
   outline: none;
 }
+.zip-input{
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
+}
 
 /* Style for Placeholder Text*/
 ::placeholder {
   /* Firefox, Chrome, Opera */
   color: #f0d43a;
+  opacity: 0.5;
   font-family: "Oswald", sans-serif;
 }
 
