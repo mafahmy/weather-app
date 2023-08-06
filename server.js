@@ -18,16 +18,12 @@ app.use(bodyParser.json());
 
 // Cors for cross origin allowance
 const cors = require("cors");
-app.use(cors());
+app.use(cors()); 
 // Initialize the main project folder
 app.use(express.static("website"));
 
 // Setup Server
 const port = 4001;
-const server = app.listen(port, () => {
-  console.log(`app is running on port : ${port}`);
-});
-
 app.get("/all", (req, res) => {
   //   get route to '/all'
   res.send(projectData); // send it to projectdata
@@ -35,11 +31,17 @@ app.get("/all", (req, res) => {
 
 app.post("/add", (req, res) => {
   // post route to '/add'
-  projectData = {
-    temperature: req.body.temperature,
-    date: req.body.date, // store the req.body of the items in the object
-    user_response: req.body.user_response,
-  };
+  const { temperature, date, user_response } = req.body;
+  projectData = { temperature, date, user_response };
   res.send(projectData);
   console.log(projectData);
 });
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send({ Error: err });
+});
+
+app.listen(port, () => {
+  console.log(`app is running on port : ${port}`);
+});
+
