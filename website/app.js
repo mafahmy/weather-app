@@ -1,8 +1,5 @@
 /* Global Variables */
 
-const baseUrl = "http://api.openweathermap.org/data/2.5/weather?zip=";
-const apiKey = "&units=imperial&appid=23c201ff8b3d5bb7708b00f61531dbcd";
-
 document.getElementById("generate").addEventListener("click", performAction); //click event listener
 
 function performAction() {
