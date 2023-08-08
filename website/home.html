@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
     <link rel="stylesheet" href="home.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:wght@600&family=Dancing+Script:wght@700&family=IBM+Plex+Sans:wght@600&family=Inter:wght@400;600&family=Montserrat:wght@800&family=MuseoModerno:wght@300;500&family=Poppins:ital,wght@0,700;1,300&family=Space+Mono&family=Syne:wght@400;500;700&family=Work+Sans&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
@@ -15,21 +23,37 @@
 
     <main>
       <section>
-        <article>
+        <article class="hero-text">
           <h2>Welcome to Weather App</h2>
+          <h2 style="color: rgb(158, 154, 211)">Get acuurate Weather data</h2>
+          <h2 style="color: #9e9ad3">Add your zipcode below to</h2>
+          <h2>get your weather data</h2>
         </article>
+        <article class="image-container">
+          <img class="hero-image"src="images/hero-image.png" alt="" />
+          <a href="https://pngtree.com/freepng/weather-flat-icon_3606895.html"
+            >png image from pngtree.com/</a
+          >
+        </article>
+      </section>
+      <section>
         <form>
           <label for="zipCode"></label>
           <input
-            type="number"
+            type="text"
             id="zipCode"
             name="zipCode"
-            placeholder="Zip Code"
+            placeholder="zipcode"
             class=""
+            maxlength="5"
           />
-          <button type="submit">Generate</button>
+          <button type="submit">></button>
         </form>
       </section>
     </main>
+    <footer>
+      <p>Copyright &copy; <span id="year">2023</span> Weather App</p>
+      <p>All Right Reserved</p>
+    </footer>
   </body>
 </html>

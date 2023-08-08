@@ -1,9 +1,12 @@
 * {
-    margin: 0;
+  margin: 0;
 }
 body {
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-image: url('images/back-ground.png');
   color: white;
 }
@@ -11,22 +14,103 @@ header {
   position: sticky;
   z-index: 10;
   top: 0px;
-  background-color: black;
+  background-color: #060733ad;
+  margin-bottom: 50px;
 }
 .header-section {
-  padding: 0.1rem;
+  padding: 0.5rem;
 }
 .header-section h1 {
-  font-weight: 500;
-  margin-left: 3rem;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-left: 2rem;
 }
 main {
-    min-height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
 main section {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.hero-text h2{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  /* font-style: italic; */
+  font-size: 30px;
+}
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.image-container a {
+  color: black;
+  font-size: 8px;
+}
+.hero-image {
+  width: 300px;
+}
+form {
+  display: flex;
+}
+input {
+  width: 130px;
+  padding: 10px;
+  text-align: center;
+  font-size: 2.5rem;
+  line-height: 1.5rem;
+  border-radius: 0.75rem 0 0 0.75rem;
+  border-style: none;
+}
+input:focus {
+  outline: none;
+}
+
+::placeholder {
+  /* Firefox, Chrome, Opera */
+  font-size: 1.8rem;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  font-size: 1.8rem;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  font-size: 1.8rem;
+}
+button {
+  border: none;
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(255, 255, 255, 0.76));
+  padding: 10px;
+  font-size: 2.5rem;
+  border-radius: 0 0.75rem 0.75rem 0;
+  color: #fff;
+}
+button:hover {
+  background: linear-gradient(rgba(255, 255, 255, 1), rgba(174, 174, 174, 1));
+  color: rgba(72, 49, 157, 1);
+}
+
+footer {
+  background-color: #060733ad;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 600px) {
+  .hero-text h2{
+    font-size: 20px;
+  }
 }
