@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
-    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="style/home.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -37,12 +37,12 @@
         </article>
       </section>
       <section>
-        <form>
-          <label for="zipCode"></label>
+        <form id="zipcode-form">
+          <label for="zipcode"></label>
           <input
             type="text"
-            id="zipCode"
-            name="zipCode"
+            id="zipcode"
+            name="zipcode"
             placeholder="zipcode"
             class=""
             maxlength="5"
@@ -50,10 +50,14 @@
           <button type="submit">></button>
         </form>
       </section>
+      <section id="weather-data" class="weather-data">
+
+      </section>
     </main>
     <footer>
       <p>Copyright &copy; <span id="year">2023</span> Weather App</p>
       <p>All Right Reserved</p>
     </footer>
+    <script src="functions/functions.js"></script>
   </body>
 </html>
