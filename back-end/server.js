@@ -9,7 +9,12 @@ const app = express();
 dotenv.config();
 
 /* Middleware*/
+
+// Cors for cross origin allowance
+app.use(cors());
+
 //Here we are configuring express to use body-parser as middle-ware.
+
 app.use(
   bodyParser.urlencoded({
     extended: false,
@@ -17,8 +22,7 @@ app.use(
 );
 app.use(bodyParser.json());
 
-// Cors for cross origin allowance
-app.use(cors());
+
 
 // Initialize the main project folder
 app.use(express.static("../website"));
@@ -44,12 +48,12 @@ const getWeatherData = async (zipCode) => {
  */
 app.post('/get-weather-data', async (req, res, next) => {
   try {
-    const { zipCode } = req.body;
+    const { zipcode } = req.body;
     // Validate the zip code using a regular expression
-    if (!/^\d{5}(-\d{4})?$/.test(zipCode)) {
+    if (!/^\d{5}(-\d{4})?$/.test(zipcode)) {
       return res.status(400).send({ error: 'Invalid zip code' });
     }
-    const weatherData = await getWeatherData(zipCode);
+    const weatherData = await getWeatherData(zipcode);
     res.send(weatherData);
   } catch (error) {
     next(error);
