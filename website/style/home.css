@@ -7,7 +7,7 @@ body {
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url('images/back-ground.png');
+  /* background-image: url('images/back-ground.png'); */
   color: white;
 }
 header {
@@ -22,9 +22,9 @@ header {
 }
 .header-section h1 {
   font-family: 'Dancing Script', cursive;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  margin-left: 2rem;
+
 }
 main {
   min-height: 100vh;
@@ -45,6 +45,7 @@ main section {
   font-weight: 700;
   /* font-style: italic; */
   font-size: 30px;
+  color: black;
 }
 .image-container {
   display: flex;
@@ -68,6 +69,7 @@ input {
   text-align: center;
   font-size: 2.5rem;
   line-height: 1.5rem;
+  background-color: #cfd4ed;
   border-radius: 0.75rem 0 0 0.75rem;
   border-style: none;
 }
