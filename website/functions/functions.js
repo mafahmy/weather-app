@@ -1,4 +1,35 @@
 
+// Get the form element
+const form = document.getElementById('zipcode-form');
+
+// Add an event listener to handle form submission
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const zipcode = document.getElementById('zipcode').value;
+
+    // Validate the zipcode
+    if (!/^\d{5}(-\d{4})?$/.test(zipcode)) {
+        alert('Invalid zip code');
+        return;
+    }
+
+    // Fetch the weather data
+    getWeatherDataFromApi({ zipcode })
+        .then((data) => {
+            // Update the page content with the weather data
+            // ...
+            console.log(data)
+        })
+        .catch((error) => {
+            // Handle errors here
+            console.error('ERROR:', error);
+            alert('An error occurred while fetching the weather data');
+        });
+});
+
+
+
+
 /**
  * Fetches weather data from the API for the given parameters.
  * @param {Object} params - The parameters to pass to the API.
@@ -26,5 +57,6 @@ const getWeatherDataFromApi = (params) => {
             throw error;
         });
 };
+
 
 
