@@ -5,7 +5,7 @@
  * @param {number} params.zipcode - The zip code to fetch weather data for.
  * @returns {Promise<Object>} A promise that resolves with the weather data.
  */
-const getWeatherDataFromApi = async (params) => {
+const getWeatherDataFromApi = (params) => {
     // Make a POST request to the /get-weather-data endpoint
     return fetch('http://localhost:4001/get-weather-data', {
         method: 'POST',
