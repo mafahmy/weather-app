@@ -1,22 +1,17 @@
 
 // Get the form element
 const form = document.getElementById('zipcode-form');
-
 // Add an event listener to handle form submission
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const zipcode = document.getElementById('zipcode').value;
-
     // Validate the zipcode
     if (!/^\d{5}(-\d{4})?$/.test(zipcode)) {
         alert('Invalid zip code');
         return;
     }
-
     // Fetch the weather data and update UI
     updateWeatherDataUi(zipcode);
-
-
 });
 
 /**
@@ -27,8 +22,6 @@ const updateWeatherDataUi = async (zipcode) => {
     // Fetch the weather data from the API
     await getWeatherDataFromApi({ zipcode })
         .then((data) => {
-            // Check if data was returned
-
             // Update the page content with the weather data
             document.getElementById('temperature').textContent = `${data.main.temp} F`;
             document.getElementById('maxTemp').textContent = `${data.main.temp_max} F`;

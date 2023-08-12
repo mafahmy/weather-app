@@ -90,14 +90,12 @@ input:focus {
   margin: 0;
   padding: 0;
 }
-
 :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   font-size: 1.8rem;
   margin: 0;
   padding: 0;
 }
-
 ::-ms-input-placeholder {
   /* Microsoft Edge */
   font-size: 1.8rem;
