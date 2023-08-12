@@ -1,6 +1,9 @@
+/* Reset margins for all elements */
 * {
   margin: 0;
+  box-sizing: border-box;
 }
+/* Set font and background styles for the body */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -10,7 +13,8 @@ body {
   /* background-image: url('images/back-ground.png'); */
   color: white;
 }
-header {
+/* Set styles for the header */
+ header .header-section {
   position: sticky;
   z-index: 10;
   top: 0px;
@@ -24,8 +28,8 @@ header {
   font-family: 'Dancing Script', cursive;
   font-size: 2.5rem;
   font-weight: 700;
-
 }
+/* Set styles for the main content */
 main {
   min-height: 100vh;
   display: flex;
@@ -40,13 +44,15 @@ main section {
   justify-content: space-around;
   flex-wrap: wrap;
 }
-.hero-text h2{
+/* Set styles for the hero text */
+.hero-text h2 {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   /* font-style: italic; */
   font-size: 30px;
   color: black;
 }
+/* Set styles for the image container */
 .image-container {
   display: flex;
   flex-direction: column;
@@ -54,12 +60,13 @@ main section {
   justify-content: center;
 }
 .image-container a {
-  color: black;
+  color: #c5c0c0;
   font-size: 8px;
 }
 .hero-image {
   width: 300px;
 }
+/* Set styles for the form and its input fields */
 form {
   display: flex;
 }
@@ -80,16 +87,22 @@ input:focus {
 ::placeholder {
   /* Firefox, Chrome, Opera */
   font-size: 1.8rem;
+  margin: 0;
+  padding: 0;
 }
 
 :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   font-size: 1.8rem;
+  margin: 0;
+  padding: 0;
 }
 
 ::-ms-input-placeholder {
   /* Microsoft Edge */
   font-size: 1.8rem;
+  margin: 0;
+  padding: 0;
 }
 button {
   border: none;
@@ -104,6 +117,49 @@ button:hover {
   color: rgba(72, 49, 157, 1);
 }
 
+.weather-data-container {
+  position: relative;
+  display: none;
+  background-color: #9ca4cb;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  width: 75%;
+  margin: auto;
+  flex-direction: column;
+  animation-name: slideInFromBottom;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  margin-bottom: 50px;
+}
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+.weather-data-container header {
+  margin-bottom: 50px;
+}
+.weather-data-item {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.weather-data-label {
+  font-weight: bold;
+}
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
 footer {
   background-color: #060733ad;
   display: flex;
@@ -112,7 +168,7 @@ footer {
   justify-content: center;
 }
 @media only screen and (max-width: 600px) {
-  .hero-text h2{
+  .hero-text h2 {
     font-size: 20px;
   }
 }
