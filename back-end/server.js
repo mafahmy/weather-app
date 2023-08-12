@@ -22,8 +22,6 @@ app.use(
 );
 app.use(bodyParser.json());
 
-
-
 // Initialize the main project folder
 app.use(express.static("../website"));
 
