@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta tags for SEO optimization -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="An app that gets the weather information for the zipcode area"
+    />
+    <meta
+      name="keywords"
+      content="weather, hot today, rain, humidity, pressure"
+    />
+    <meta name="author" content="Mahmoud Fahmy" />
+    <meta property="og:title" content="Get the weather information" />
+    <meta
+      property="og:description"
+      content="Get the weather data for a zipcode area."
+    />
+    <meta property="og:image" content="#" />
+
+    <!-- Page title -->
     <title>Weather App</title>
+
+    <!-- Stylesheets and fonts -->
     <link rel="stylesheet" href="style/home.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,29 +33,38 @@
     />
   </head>
   <body>
+    <!-- Header section -->
     <header>
       <section class="header-section">
         <h1>Weather App</h1>
       </section>
     </header>
 
+    <!-- Main content -->
     <main>
+      <!-- Hero section -->
       <section>
+        <!-- Hero text -->
         <article class="hero-text">
           <h2>Welcome to Weather App</h2>
           <h2 style="color: rgb(158, 154, 211)">Get acuurate Weather data</h2>
           <h2 style="color: #9e9ad3">Add your zipcode below to</h2>
           <h2>get your weather data</h2>
         </article>
+
+        <!-- Hero image -->
         <article class="image-container">
-          <img class="hero-image"src="images/hero-image.png" alt="" />
+          <img class="hero-image" src="images/hero-image.png" alt="" />
           <a href="https://pngtree.com/freepng/weather-flat-icon_3606895.html"
             >png image from pngtree.com/</a
           >
         </article>
       </section>
+
+      <!-- Zipcode form -->
       <section>
         <form id="zipcode-form">
+          <!-- Zipcode input field -->
           <label for="zipcode"></label>
           <input
             type="text"
@@ -47,17 +74,52 @@
             class=""
             maxlength="5"
           />
+
+          <!-- Submit button -->
           <button type="submit">></button>
         </form>
       </section>
-      <section id="weather-data" class="weather-data">
 
+      <!-- Weather data section -->
+      <section id="weather-data" class="weather-data-container">
+        <!-- Close button -->
+        <span class="close-button">×</span>
+        <!-- City name header -->
+        <header>
+          <h2 id="cityName">Rocky Mount</h2>
+        </header>
+        <article class="weather-data-item">
+          <span class="weather-data-label">Temperature</span>
+          <span id="temperature" class="weather-data-value">25°C</span>
+        </article>
+        <article class="weather-data-item">
+          <span class="weather-data-label">Max Temp.</span>
+          <span id="maxTemp" class="weather-data-value">25°c</span>
+        </article>
+        <article class="weather-data-item">
+          <span class="weather-data-label">Min Temp.</span>
+          <span id="minTemp" class="weather-data-value">25°C</span>
+        </article>
+        <article class="weather-data-item">
+          <span class="weather-data-label">Feels Like</span>
+          <span id="feelsLike" class="weather-data-value">25°C</span>
+        </article>
+        <article class="weather-data-item">
+          <span class="weather-data-label">Humidity:</span>
+          <span id="humidity" class="weather-data-value">60%</span>
+        </article>
+        <article class="weather-data-item">
+          <span class="weather-data-label">Wind Speed:</span>
+          <span id="windSpeed" class="weather-data-value">10 km/h</span>
+        </article>
       </section>
     </main>
+    <!--Footer section-->
     <footer>
       <p>Copyright &copy; <span id="year">2023</span> Weather App</p>
       <p>All Right Reserved</p>
     </footer>
+    <!--Script for functionality-->
     <script src="functions/functions.js"></script>
   </body>
 </html>
